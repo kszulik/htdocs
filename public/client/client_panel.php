@@ -1,8 +1,14 @@
 <?php
-require_once __DIR__ . '/../../src/Database.php';
 session_start();
 if ($_SESSION['user_role'] !== 'client') {
     echo "Brak dostępu. Ta strona jest dostępna tylko dla klientów.";
+    exit;
+}
+
+// Wylogowanie użytkownika
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header("Location: ../login.php");
     exit;
 }
 ?>
@@ -16,9 +22,16 @@ if ($_SESSION['user_role'] !== 'client') {
 </head>
 <body>
 <h1>Panel Klienta</h1>
+<p>Zalogowany jako: <strong><?= htmlspecialchars($_SESSION['user_name']) ?></strong></p>
+
 <ul>
     <li><a href="book_appointment.php">Zarezerwuj wizytę</a></li>
     <li><a href="my_appointments.php">Moje rezerwacje</a></li>
 </ul>
+
+<!-- Przycisk "Wyloguj" -->
+<form method="POST" action="">
+    <button type="submit" name="logout">Wyloguj</button>
+</form>
 </body>
 </html>

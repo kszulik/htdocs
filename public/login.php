@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Zalogowanie użytkownika
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['name'];
-        $_SESSION['user_role'] = $user['role']; // Zapisanie roli w sesji
+        $_SESSION['user_role'] = $user['role'];
 
         // Przekierowanie do odpowiedniego panelu
         if ($user['role'] === 'admin') {
@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Nieprawidłowy email lub hasło.";
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="password" id="password" name="password" required><br><br>
 
     <button type="submit">Zaloguj się</button>
+</form>
+
+<!-- Przycisk "Zarejestruj" -->
+<form method="GET" action="register.php">
+    <button type="submit">Zarejestruj</button>
 </form>
 </body>
 </html>

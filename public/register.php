@@ -46,7 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Wstaw nowego użytkownika
             $stmt = $pdo->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
             if ($stmt->execute([$name, $email, $password_hashed])) {
-                echo "Rejestracja zakończona sukcesem!";
+                // Przekierowanie do strony logowania po pomyślnej rejestracji
+                header("Location: login.php");
                 exit;
             } else {
                 $errors[] = "Wystąpił błąd podczas rejestracji.";
