@@ -3,7 +3,7 @@ require_once __DIR__ . '/../src/Database.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
+    $email = trim($_POST['email']);
     $password = $_POST['password'];
 
     $db = new Database();
@@ -18,12 +18,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Zalogowanie użytkownika
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['name'];
-        $_SESSION['user_role'] = $user['role'];
-        echo "Logowanie zakończone sukcesem! Witaj, " . $user['name'] . "!";
+        $_SESSION['user_role'] = $user['role']; // Zapisanie roli w sesji
+
+        // Przekierowanie do odpowiedniego panelu
+        if ($user['role'] === 'admin') {
+            header("Location: admin_panel.php");
+        } elseif ($user['role'] === 'employee') {
+            header("Location: employee_panel.php");
+        } elseif ($user['role'] === 'client') {
+            header("Location: client_panel.php");
+        }
+        exit;
     } else {
         echo "Nieprawidłowy email lub hasło.";
     }
 }
+
 ?>
 
 <!DOCTYPE html>
