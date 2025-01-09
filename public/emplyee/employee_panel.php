@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../../src/Database.php';
 session_start();
 if ($_SESSION['user_role'] !== 'employee') {
     echo "Brak dostępu. Ta strona jest dostępna tylko dla pracowników.";

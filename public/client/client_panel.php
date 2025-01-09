@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../../src/Database.php';
 session_start();
 if ($_SESSION['user_role'] !== 'client') {
     echo "Brak dostępu. Ta strona jest dostępna tylko dla klientów.";

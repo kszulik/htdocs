@@ -22,11 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Przekierowanie do odpowiedniego panelu
         if ($user['role'] === 'admin') {
-            header("Location: admin_panel.php");
+            header("Location: admin/admin_panel.php");
         } elseif ($user['role'] === 'employee') {
-            header("Location: employee_panel.php");
+            header("Location: employee/employee_panel.php");
         } elseif ($user['role'] === 'client') {
-            header("Location: client_panel.php");
+            header("Location: client/client_panel.php");
         }
         exit;
     } else {
