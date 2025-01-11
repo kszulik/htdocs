@@ -1,0 +1,21 @@
+/* Portio Addon Icon on Elementor Dashboard */
+.elementor-element .icon {
+    position: relative;
+}
+
+.elementor-element .icon .angel-element-icon::after {
+    content: "AG";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    color: #fff;
+    font-size: 10px;
+    font-size: 600;
+    font-family: "Roboto", Arial,Helvetica,sans-serif;
+    padding: 0.2em 0.5em;
+    background: #e1488c;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+

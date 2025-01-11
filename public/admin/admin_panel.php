@@ -5,7 +5,6 @@ if ($_SESSION['user_role'] !== 'admin') {
     exit;
 }
 
-// Wylogowanie użytkownika
 if (isset($_POST['logout'])) {
     session_destroy();
     header("Location: ../login.php");
@@ -26,11 +25,11 @@ if (isset($_POST['logout'])) {
 
 <ul>
     <li><a href="manage_users.php">Zarządzaj użytkownikami</a></li>
-    <li><a href="manage_services.php">Zarządzaj usługami</a></li>
+    <li><a href="../services/service_panel.php">Zarządzaj usługami</a></li>
     <li><a href="manage_appointments.php">Zarządzaj rezerwacjami</a></li>
 </ul>
 
-<!-- Przycisk "Wyloguj" -->
+<!-- Przycisk Wyloguj -->
 <form method="POST" action="">
     <button type="submit" name="logout">Wyloguj</button>
 </form>

@@ -1,0 +1,49 @@
+
+---Downloaded files---
+The import files for: angel Import were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/wordpress
+Data file = C:\xampp\htdocs\wordpress/wp-content/uploads/2025/01/demo-content-import-file_2025-01-11__11-04-20.xml
+Widget file = C:\xampp\htdocs\wordpress/wp-content/uploads/2025/01/demo-widgets-import-file_2025-01-11__11-04-20.json
+Customizer file = C:\xampp\htdocs\wordpress/wp-content/uploads/2025/01/demo-customizer-import-file_2025-01-11__11-04-20.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Blog Sidebar : 
+
+Blok - No Title - Widget already exists
+Blok - No Title - Imported
+Blok - No Title - Imported
+Wyszukiwanie - No Title - Imported
+Ostatnie wpisy - No Title - Imported
+Najnowsze komentarze - No Title - Imported
+Archiwa - No Title - Imported
+Kategorie - No Title - Imported
+Meta - No Title - Imported
+
+Footer Widgets : 
+
+Blok - No Title - Imported
+Blok - No Title - Imported
+Tekst - No Title - Imported
+Menu nawigacji - Useful Links - Imported
+Galeria - Gallery - Imported
+Tekst - Newsletter - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+
